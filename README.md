@@ -18,7 +18,8 @@ See globals.conf to change defaults but by default these packages are used optio
 ```bash
 #Arch install optional deps
 #In progress does not cover all deps atm
-sudo pacman -S --needed hypr waybar adw-gtk-theme sddm polkit easyeffects
+yay -S --needed --noconfirm hypr waybar adw-gtk-theme sddm polkit easyeffects ghostty dolphin wofi firefox visual-studio-code-bin starship blueman nm-connection-editor
+#nm will be changed to kde settings in the future
 ```
 
 ## Acknowledgements
