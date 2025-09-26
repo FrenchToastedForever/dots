@@ -9,6 +9,14 @@ A super W.I.P hyprland and currently waybar configuration (hoping to expand to t
 - Refer to .config/hyprland/global.conf for default apps opened by keybinds
 - All configuration for hyprland is stored in .config/hypr/hyprland
 
+## Roadmap
+- [ ]  Fully customize hyprland config (Everything except waybar and Quickshell)
+- [ ]  Add rofi functionality 
+- [ ]  First legacy release
+- [ ]  Migrate to Quickshell (New branch move main to legacy)
+- [ ]  Add Quickshell bar (second release)
+
+
 ## Install
 
 Theres really no reason to be doing fancy installations for this simple config so simply move the files in .config/ to your config directory!
