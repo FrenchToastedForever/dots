@@ -1,5 +1,5 @@
 
-# Bmbay Dotfiles Unstable (Untested configs will be merged with master once tested)
+# Bmbay Dotfiles
 
 A super W.I.P hyprland and currently waybar configuration (hoping to expand to the hyprland ecosystem and quickshell)
 
