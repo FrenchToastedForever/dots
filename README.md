@@ -25,4 +25,5 @@ yay -S --needed --noconfirm hypr waybar adw-gtk-theme sddm polkit easyeffects gh
 ## Acknowledgements
 
  - [Current Waybar config (planning on updating to my own later on or just straight to QS we will see)](https://github.com/Prateek7071/dotfiles)
+ - [Presets for easyeffects](https://github.com/JackHack96/EasyEffects-Presets/)
 
