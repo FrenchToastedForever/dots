@@ -5,15 +5,28 @@ import QtQuick.Layouts
 
 PanelWindow {
     id: bar
+    
+    color: "transparent"
+    
     anchors {
         top: true
         left: true
         right: true
         //Add option for sidebar at some point
     }
-    implicitHeight: 35
-    Clock {
-        Layout.fillHeight: true
-        Layout.leftMargin: 3
+    implicitHeight: 32
+    Rectangle {
+        implicitHeight: 32
+        
+        color: "white"
+        anchors {
+            top: parent.top
+            left: parent.left
+            right: parent.right
+        
+        }
+        BarLayout {
+            anchors.fill: parent
+        }
     }
 }
