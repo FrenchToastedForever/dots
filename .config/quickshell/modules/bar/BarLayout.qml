@@ -22,7 +22,13 @@ Item {
         Loader {
             sourceComponent: Component { Tray {} }
             Layout.alignment: Qt.AlignVCenter 
-            Layout.rightMargin: 8 
+            Layout.rightMargin: 0
+        }
+        Loader {
+            sourceComponent: Component { Session {} }
+            Layout.alignment: Qt.AlignVCenter 
+            Layout.rightMargin: 4
+            
         }
     }
 }

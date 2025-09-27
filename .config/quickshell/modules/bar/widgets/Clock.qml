@@ -8,7 +8,7 @@ Rectangle {
     id: container
     radius: 8
     implicitWidth: clockText.width + 20  
-    implicitHeight: clockText.height + 6
+    implicitHeight: 22
     
     color: "lightgray"
     

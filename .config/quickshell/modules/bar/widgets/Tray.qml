@@ -9,7 +9,7 @@ Rectangle {
     id: container
     radius: 8
     implicitWidth: trayLayout.width + 20  
-    implicitHeight: trayLayout.height + 6
+    implicitHeight: 22
     color: "lightgray"
     RowLayout {
         id: trayLayout
