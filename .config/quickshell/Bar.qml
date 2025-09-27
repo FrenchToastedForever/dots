@@ -1,6 +1,7 @@
 import Quickshell
 import qs.bar
 import qs.services
+import QtQuick.Layouts
 
 
 Scope {
@@ -22,8 +23,10 @@ Scope {
       implicitHeight: 30
 
       ClockWidget {
-        anchors.centerIn: parent
-
+        align.centerIn:parent
+        
+        
+        
         // no more time binding
       }
     }

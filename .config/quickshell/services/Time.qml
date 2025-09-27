@@ -15,6 +15,6 @@ Singleton {
 
   SystemClock {
     id: clock
-    precision: SystemClock.Minutes
+    precision: SystemClock.Seconds
   }
 }
