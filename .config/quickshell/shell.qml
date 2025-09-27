@@ -1,6 +1,12 @@
-// shell.qml
+import QtQuick
 import Quickshell
+import qs.modules.bar
 
-Scope {
-  Bar {}
+ShellRoot {
+    property bool enableBar: true
+
+    LazyLoader {
+        active: enableBar
+        component: Bar {}
+    }
 }
