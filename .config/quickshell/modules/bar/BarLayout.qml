@@ -8,7 +8,11 @@ Item {
     
     RowLayout {
         anchors.fill: parent
-
+        Loader {
+            sourceComponent: Component { Workspace {} }
+            Layout.alignment: Qt.AlignVCenter 
+            Layout.leftMargin: 4 
+        }
         Loader {
             sourceComponent: Component { Clock {} }
             Layout.alignment: Qt.AlignVCenter 
