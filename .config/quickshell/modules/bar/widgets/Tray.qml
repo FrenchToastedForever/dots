@@ -1,0 +1,45 @@
+import QtQuick
+import Quickshell
+import QtQuick.Layouts
+import QtQuick.Controls
+import qs
+import Quickshell.Services.SystemTray
+
+Rectangle {
+    id: container
+    radius: 8
+    implicitWidth: trayLayout.width + 20  
+    implicitHeight: trayLayout.height + 6
+    color: "lightgray"
+    RowLayout {
+        id: trayLayout
+        anchors.fill: parent
+        Repeater {
+            model: SystemTray.icons
+            delegate: Item {
+                width: iconImage.width
+                height: iconImage.height
+                Image {
+                    id: iconImage
+                    source: modelData.iconSource
+                    fillMode: Image.PreserveAspectFit
+                    anchors.fill: parent
+                }
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: {
+                        modelData.activate()
+                    }
+                    hoverEnabled: true
+                    onEntered: {
+                        modelData.showToolTip()
+                    }
+                    onExited: {
+                        modelData.hideToolTip()
+                    }
+                }
+            }
+        }
+        
+    }
+}

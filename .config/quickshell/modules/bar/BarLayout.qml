@@ -7,14 +7,22 @@ Item {
     id: root
     
     RowLayout {
-        
         anchors.fill: parent
+
         Loader {
             sourceComponent: Component { Clock {} }
             Layout.alignment: Qt.AlignVCenter 
-            
             Layout.leftMargin: 8 
         }
-        Item { Layout.fillWidth: true}
+        
+        Item {
+            Layout.fillWidth: true
+        }
+
+        Loader {
+            sourceComponent: Component { Tray {} }
+            Layout.alignment: Qt.AlignVCenter 
+            Layout.rightMargin: 8 
+        }
     }
 }
