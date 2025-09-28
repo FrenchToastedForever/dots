@@ -3,11 +3,13 @@ import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
 import Quickshell.Hyprland
+import qs.services
 
 Rectangle {
     id: container
     radius: 999
-    color: "lightgray"
+    color: Colors.surface_container
+
     
     implicitHeight: 22
     
@@ -59,13 +61,15 @@ Rectangle {
 
                 opacity: modelData.id === Hyprland.focusedWorkspace.id ? 1 : 0.7
                 
-                color: "gray"
+                color: Colors.surface_container_highest
                 
                 Text {
                     
+                    color: Colors.on_surface
+                    
                     anchors.centerIn: parent
                     text: modelData.name
-                    color: "black"
+                    
                 }
             }
                 

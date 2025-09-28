@@ -3,6 +3,7 @@ import Quickshell
 import Quickshell.Io
 import QtQuick.Layouts
 import QtQuick.Controls
+import qs.services
 
 Rectangle {
     id: container
@@ -10,7 +11,7 @@ Rectangle {
     implicitWidth: 22
     implicitHeight: 22
     
-    color: "lightgray"
+    color: Colors.on_background
     
     RowLayout {
         id: sessionLayout

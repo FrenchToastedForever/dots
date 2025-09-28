@@ -1,4 +1,10 @@
 [config]
+
+[config.wallpaper]
+command = "swww"
+arguments = ["img", "--transition-type", "grow", "--transition-duration", "1"]
+set = true
+
 [templates.quickshell]
 input_path = 'templates/QS.qml'
 output_path = '~/.config/quickshell/services/Colors.qml'

@@ -2,7 +2,7 @@ import QtQuick
 import Quickshell
 import QtQuick.Layouts
 import QtQuick.Controls
-import qs
+import qs.services
 import Quickshell.Services.SystemTray
 
 Rectangle {
@@ -10,7 +10,7 @@ Rectangle {
     radius: 8
     implicitWidth: trayLayout.width + 20  
     implicitHeight: 22
-    color: "lightgray"
+    color: Colors.surface_container
     RowLayout {
         id: trayLayout
         anchors.fill: parent

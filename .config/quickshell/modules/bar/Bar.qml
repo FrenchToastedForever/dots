@@ -2,6 +2,7 @@ import QtQuick
 import Quickshell
 import "./widgets"
 import QtQuick.Layouts
+import qs.services
 
 
 PanelWindow {
@@ -19,7 +20,7 @@ PanelWindow {
     Rectangle {
         implicitHeight: 32
         radius: -3
-        color: "white"
+        color: Colors.background
         anchors {
             top: parent.top
             left: parent.left

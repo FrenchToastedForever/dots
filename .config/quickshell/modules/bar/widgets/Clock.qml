@@ -2,6 +2,7 @@ import QtQuick
 import Quickshell
 import qs.services
 import QtQuick.Layouts
+import qs.services
 
 
 Rectangle {
@@ -15,7 +16,7 @@ Rectangle {
     
     //Add color
     Text {
-        
+        color: Colors.on_background
         anchors.centerIn: parent
         textFormat: Text.RichText
         font.bold: true
