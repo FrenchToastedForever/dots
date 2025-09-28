@@ -6,7 +6,7 @@ import Quickshell.Hyprland
 
 Rectangle {
     id: container
-    radius: 8
+    radius: 999
     color: "lightgray"
     
     implicitHeight: 22
@@ -41,7 +41,7 @@ Rectangle {
     property int wsCount: displays.length
     property int wsSize: height
     property int wsSpacing: wsRow.spacing
-    implicitWidth: wsCount > 0 ? (wsCount * wsSize) + ((wsCount - 1) * wsSpacing) + 12 : wsSize + 12
+    implicitWidth: wsCount > 0 ? (wsCount * wsSize) + ((wsCount - 1) * wsSpacing)  : wsSize + 12
     RowLayout {
         id: wsRow
         anchors.fill: parent

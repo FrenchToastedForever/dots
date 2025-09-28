@@ -6,11 +6,12 @@ import QtQuick.Layouts
 
 Rectangle {
     id: container
-    radius: 8
+    radius: 999
     implicitWidth: clockText.width + 20  
     implicitHeight: 22
+    color: "transparent"
     
-    color: "lightgray"
+    //color: "lightgray"
     
     //Add color
     Text {
@@ -18,8 +19,9 @@ Rectangle {
         anchors.centerIn: parent
         textFormat: Text.RichText
         font.bold: true
+        font.pixelSize: 16
         id: clockText
-        text: {Qt.formatDateTime(Time.clock.date, "MM/dd/yy ddd hh:mm:ss AP t")}
+        text: {Qt.formatDateTime(Time.clock.date, "ddd. MM/dd/yy hh:mm:ss AP")}
     }
     
 }

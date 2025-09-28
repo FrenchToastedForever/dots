@@ -6,12 +6,11 @@ import QtQuick.Controls
 
 Rectangle {
     id: container
-    topLeftRadius: 8
-    bottomLeftRadius: 8
-    implicitWidth: sessionLayout.width + 15
-    implicitHeight: 32
+    radius: 999
+    implicitWidth: 22
+    implicitHeight: 22
     
-    color: "transparent"
+    color: "lightgray"
     
     RowLayout {
         id: sessionLayout
@@ -22,24 +21,18 @@ Rectangle {
             
             anchors.fill: parent
             
-            text: "⏻" 
-            
-            font.bold: true
-            font.pixelSize: 32
-
-            // Make the button background transparent
             background: Rectangle {
                 color: "transparent"
             }
 
-            // Run wlogout when the button is clicked
+            // Run rofi when the button is clicked
             onClicked: {
-                wlogoutProcess.running = true
+                rofiProcess.running = true
             }
 
             Process {
-                id: wlogoutProcess
-                command: ["wlogout"]
+                id: rofiProcess
+                command: ["rofi", "-show", "drun"]
                 running: false
             }
         }
