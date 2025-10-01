@@ -10,7 +10,7 @@ Rectangle {
     radius: 999
     color: "lightgray"
     Button {
-
+        text: "󰍜"
     }
 
 }
