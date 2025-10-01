@@ -3,6 +3,7 @@ import Quickshell
 import Quickshell.Io
 import QtQuick.Layouts
 import QtQuick.Controls
+import qs.services
 
 Rectangle {
     id: container
@@ -21,11 +22,21 @@ Rectangle {
         Button {
             
             anchors.fill: parent
+            padding: 0
             
-            text: "⏻" // FontAwesome power-off icon
-            font.family: "FontAwesome"
-            font.bold: true
-            font.pixelSize: 32
+            Text {
+                // Fill the button and center the glyph
+                anchors.fill: parent
+                anchors.centerIn: parent
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+
+                text: "⏻"
+                color: Colors.on_background
+                font.bold: true
+                font.pixelSize: 32
+            }
+            
 
             // Make the button background transparent
             background: Rectangle {

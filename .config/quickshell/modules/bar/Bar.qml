@@ -2,6 +2,8 @@ import QtQuick
 import Quickshell
 import "./widgets"
 import QtQuick.Layouts
+import qs.services
+
 
 PanelWindow {
     id: bar
@@ -17,8 +19,8 @@ PanelWindow {
     implicitHeight: 32
     Rectangle {
         implicitHeight: 32
-        
-        color: "white"
+        radius: -3
+        color: Colors.background
         anchors {
             top: parent.top
             left: parent.left
@@ -29,4 +31,5 @@ PanelWindow {
             anchors.fill: parent
         }
     }
+    //Figure out how to round corners on the bar
 }

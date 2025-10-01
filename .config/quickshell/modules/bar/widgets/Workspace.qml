@@ -3,11 +3,14 @@ import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
 import Quickshell.Hyprland
+import qs.services
+import Quickshell.Io
 
 Rectangle {
     id: container
-    radius: 8
-    color: "lightgray"
+    radius: 999
+    color: Colors.surface_container
+
     
     implicitHeight: 22
     
@@ -41,35 +44,56 @@ Rectangle {
     property int wsCount: displays.length
     property int wsSize: height
     property int wsSpacing: wsRow.spacing
-    implicitWidth: wsCount > 0 ? (wsCount * wsSize) + ((wsCount - 1) * wsSpacing) + 12 : wsSize + 12
+    implicitWidth: wsCount > 0 ? (wsCount * wsSize) + ((wsCount - 1) * wsSpacing)  : wsSize + 12
     RowLayout {
         id: wsRow
         anchors.fill: parent
         
         Repeater {
             model: container.displays
+            id: workspaceRepeater
             //Treated as delegate anyway so I dont need delegate {}
             Rectangle {
                 //Squares for each workspace
                 width: wsRow.height
                 height: wsRow.height
                 radius: 999
+                id: rectangleContainer
 
                 //Add scale effect asp
 
+                property bool isHovered: wsButton.hovered
                 opacity: modelData.id === Hyprland.focusedWorkspace.id ? 1 : 0.7
                 
-                color: "gray"
+                color: isHovered || modelData.id === Hyprland.focusedWorkspace.id ? Colors.secondary_container : Colors.surface_container
                 
                 Text {
-                    
+                    color: Colors.on_surface
                     anchors.centerIn: parent
                     text: modelData.name
-                    color: "black"
+                    
+                }
+                Button {
+                    id: wsButton
+                    anchors.fill: parent
+                    padding: 0
+                    background: Rectangle {
+                        color: "transparent"
+                    }
+                    onClicked: {
+                        switchWindow.running = true
+                        
+                        
+                        
+                    
+                    }
+                    Process {
+                        id: switchWindow
+                        command: ["hyprctl", "dispatch", "workspace", modelData.name]
+                        running: false
+                    }
                 }
             }
-                
-            
         }
     }
 }
